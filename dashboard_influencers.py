@@ -12,7 +12,7 @@ st.title("📱 Influencer Dashboard – Instagram")
 st.markdown("Visualize os influenciadores com maior impacto para engajamento de marcas.")
 
 # Seção: Top Influencers por Total de Likes
-st.subheader("🔥 Top 20 Influencers por Total de Likes")
+st.subheader(" Top 20 Influencers por Total de Likes")
 
 fig_likes = px.bar(
     likes_df.sort_values(by="total_likes_num", ascending=True),
@@ -26,7 +26,7 @@ fig_likes = px.bar(
 st.plotly_chart(fig_likes, use_container_width=True)
 
 # Seção: Top Influencers por Engajamento
-st.subheader("📈 Top 10 Influencers com Maior Engajamento por Like")
+st.subheader(" Top 10 Influencers com Maior Engajamento por Like")
 
 fig_engage = px.bar(
     engage_df.sort_values(by="engagement_rate_like", ascending=True),
@@ -45,7 +45,7 @@ with st.expander("Visualizar dados completos"):
     st.dataframe(engage_df)
 
 # Seção: Justificativa Estratégica
-st.subheader("🎯 Por que usar esses influenciadores?")
+st.subheader(" Por que usar esses influenciadores?")
 st.markdown("""
 Usar influenciadores com **alta taxa de engajamento** e **ótimo score de influência** é uma forma eficaz de:
 - Alcançar milhões de seguidores que **confiam** nessas personalidades
